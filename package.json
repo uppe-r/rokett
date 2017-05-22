@@ -105,8 +105,7 @@
       "js"
     ],
     "moduleDirectories": [
-      "node_modules",
-      "app/node_modules"
+      "node_modules"
     ],
     "transform": {
       "^.+\\.js$": "babel-jest"
