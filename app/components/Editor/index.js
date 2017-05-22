@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import loader from 'monaco-loader';
 const appRoot = require('app-root-dir').get();
 
 function noop() {}
@@ -63,6 +64,9 @@ class MonacoEditor extends React.Component {
         this.initMonaco();
       });
     } else if (process.env.NODE_ENV === 'production') {
+      loader().then( (monaco) => {
+        console.log("Hi");
+      })
       const amdRequire = global.require('./node_modules/monaco-editor/min/vs/loader.js').require;
       amdRequire.config({
         baseUrl: './node_modules/monaco-editor/min/'
