@@ -1,5 +1,5 @@
-// flow-typed signature: 3986f1de02eec9259a6d527e578a4c61
-// flow-typed version: e6aa8b0b44/express_v4.x.x/flow_>=v0.32.x
+// flow-typed signature: 854536a9edd911ad23c1b6a8b889b1d5
+// flow-typed version: f471f20d31/express_v4.x.x/flow_>=v0.32.x
 
 import type { Server } from 'http';
 
@@ -85,7 +85,7 @@ declare class express$Response extends http$ServerResponse mixins express$Reques
   sendStatus(statusCode: number): this;
   header(field: string, value?: string): this;
   header(headers: {[name: string]: string}): this;
-  set(field: string, value?: string): this;
+  set(field: string, value?: string|string[]): this;
   set(headers: {[name: string]: string}): this;
   status(statusCode: number): this;
   type(type: string): this;
