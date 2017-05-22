@@ -14,7 +14,7 @@
     "lint-styles": "stylelint app/*.css app/components/*.css --syntax scss",
     "hot-updates-server": "cross-env NODE_ENV=development node --trace-warnings -r babel-register ./node_modules/webpack-dev-server/bin/webpack-dev-server --config webpack.config.renderer.dev.js --colors ",
     "build": "concurrently \"npm run build-main\" \"npm run build-renderer\"",
-    "build-dll": "cross-env NODE_ENV=development node --trace-warnings -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.renderer.dev.dll.js --profile --colors",
+    "build-dll": "cross-env NODE_ENV=development node --trace-warnings -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.renderer.dev.dll.js --display-error-details --profile --colors",
     "build-main": "cross-env NODE_ENV=production node --trace-warnings -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.main.prod.js --profile --colors",
     "build-renderer": "cross-env NODE_ENV=production node --trace-warnings -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.renderer.prod.js --profile --colors",
     "start": "cross-env NODE_ENV=production electron ./app/",
@@ -105,8 +105,7 @@
       "js"
     ],
     "moduleDirectories": [
-      "node_modules",
-      "app/node_modules"
+      "node_modules"
     ],
     "transform": {
       "^.+\\.js$": "babel-jest"
@@ -198,7 +197,6 @@
     "i18next": "^8.2.1",
     "i18next-browser-languagedetector": "^1.0.1",
     "json-query": "^2.2.2",
-    "monaco-editor": "^0.8.3",
     "monaco-loader": "^0.8.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
