@@ -24,6 +24,9 @@ export default merge.smart(baseConfig, {
   },
 
   module: {
+    // require(expr)
+    exprContextRegExp: /$^/,
+    exprContextCritical: false,
     rules: [
       // Extract all .global.css to style.css as is
       {
