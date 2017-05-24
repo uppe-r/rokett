@@ -24,6 +24,9 @@ export default merge.smart(baseConfig, {
   },
 
   module: {
+    // require
+    unknownContextRegExp: /$^/,
+    unknownContextCritical: false,
     // require(expr)
     exprContextRegExp: /$^/,
     exprContextCritical: false,
