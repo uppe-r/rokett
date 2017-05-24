@@ -22,7 +22,6 @@ export default merge.smart(baseConfig, {
   },
 
   plugins: [
-    new webpack.ContextReplacementPlugin(/monaco-editor/, 'min/vs'),
     /**
      * Babli is an ES6+ aware minifier based on the Babel toolchain (beta)
      */

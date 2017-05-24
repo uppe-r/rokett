@@ -143,7 +143,7 @@ export default merge.smart(baseConfig, {
   },
 
   plugins: [
-    new webpack.ContextReplacementPlugin(/loader/, './node_modules/monaco-editor/min/vs'),
+    new webpack.ContextReplacementPlugin(/monaco-editor/, './node_modules/monaco-editor/min/vs'),
     /**
      * Create global constants which can be configured at compile time.
      *
