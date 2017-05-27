@@ -24,6 +24,12 @@ export default merge.smart(baseConfig, {
   },
 
   module: {
+    // require
+    unknownContextRegExp: /$^/,
+    unknownContextCritical: false,
+    // require(expr)
+    exprContextRegExp: /$^/,
+    exprContextCritical: false,
     rules: [
       // Extract all .global.css to style.css as is
       {
@@ -137,6 +143,7 @@ export default merge.smart(baseConfig, {
   },
 
   plugins: [
+    new webpack.ContextReplacementPlugin(/monaco-editor/, ''),
     /**
      * Create global constants which can be configured at compile time.
      *

@@ -10,6 +10,7 @@ export default {
   externals: Object.keys(externals || {}),
 
   module: {
+    exprContextRegExp: /$^/,
     exprContextCritical: false,
     unknownContextRegExp: /$^/,
     unknownContextCritical: false,
